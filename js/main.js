@@ -21,4 +21,3 @@ for (let i = 1; i <= 25; i++) {
     likes: randomValue(15, 200),
     comments: randomValue(0, 200)
   });
-}
