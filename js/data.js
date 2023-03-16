@@ -1,6 +1,6 @@
-import {randomValue} from './util.js';
-const photosInfo = function() {
-  const photos = [];
+import { randomValue } from './util.js'
+const photosInfo = function () {
+  const photos = []
   for (let i = 1; i <= 25; i++) {
     photos.push({
       id: i,
@@ -8,8 +8,8 @@ const photosInfo = function() {
       description: `Фотография №${i}. Описание придумайте самостоятельно.`,
       likes: randomValue(15, 200),
       comments: randomValue(0, 200)
-    });
+    })
   }
-  return photos;
-};
-export {photosInfo};
+  return photos
+}
+export { photosInfo }
