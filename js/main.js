@@ -1,2 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { photosInfo } from './data.js'
+/* eslint-disable no-unused-vars */
+import './util.js'
+import './data.js'
+import './render.js'
