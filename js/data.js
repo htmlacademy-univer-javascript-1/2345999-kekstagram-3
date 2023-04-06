@@ -1,5 +1,5 @@
 import { randomValue } from './util.js'
-const photosInfo = function () {
+function generatePhotosInfo () {
   const photos = []
   for (let i = 1; i <= 25; i++) {
     photos.push({
@@ -12,4 +12,4 @@ const photosInfo = function () {
   }
   return photos
 }
-export { photosInfo }
+export { generatePhotosInfo }
