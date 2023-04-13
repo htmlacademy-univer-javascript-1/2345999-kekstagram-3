@@ -1,3 +1,3 @@
-import './util.js'
-import './data.js'
-import './render.js'
+import './util.js';
+import './data.js';
+import './render.js';
