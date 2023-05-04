@@ -75,7 +75,7 @@ const hashtagsHandler = (value) => {
   });
 };
 
-const commentsValidate = (comment) => comment.length <= MAX_COMMENT_SYMBOLS;
+const commentsValidate = (comm) => comm.length <= MAX_COMMENT_SYMBOLS;
 
 pristine.addValidator(hashtag, hashtagsHandler, error);
 pristine.addValidator(

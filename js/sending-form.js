@@ -19,6 +19,13 @@ const closeMessage = () => {
   message.classList.add('hidden');
 };
 
+const onErrorEscapeKeyDown = (evt) => {
+  if (isEscKey(evt)) {
+    closeMessage();
+    document.addEventListener('keydown', onEscClick);
+    document.removeEventListener('keydown', onErrorEscapeKeyDown);
+  }
+};
 const showMessage = (isSuccessful) => {
   if (isSuccessful) {
     message = successTemplate.cloneNode(true);
@@ -33,23 +40,14 @@ const showMessage = (isSuccessful) => {
 
   document.body.appendChild(message);
 };
-
-const onErrorEscapeKeyDown = (evt) => {
-  if (isEscKey(evt)) {
-    closeMessage();
-    document.addEventListener('keydown', onEscClick);
-    document.removeEventListener('keydown', onErrorEscapeKeyDown);
-  }
-};
-
-const onSuccessButtonClicked = () => closeSendingForm();
-
 const onErrorButtonClicked = () => closeMessage();
 
 const closeSendingForm = () => {
   closeMessage();
   onFormCloseButtonClick();
 };
+
+const onSuccessButtonClicked = () => closeSendingForm();
 
 const onFormEscKeyDown = (evt) => {
   if (isEscKey(evt)) {

@@ -18,8 +18,8 @@ const setDefaultScale = () => {
   image.style.transform=`scale(${1})`;
 };
 
-const setCorrectValue = (scaleValue) =>
-  Math.min(Math.max(Scale.MIN_VALUE, scaleValue), Scale.MAX_VALUE);
+const setCorrectValue = (scaleVal) =>
+  Math.min(Math.max(Scale.MIN_VALUE, scaleVal), Scale.MAX_VALUE);
 
 const onScaleClick = (evt) => {
   const target = evt.target;
