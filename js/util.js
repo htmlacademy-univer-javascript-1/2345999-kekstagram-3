@@ -14,4 +14,20 @@ function fitLength (str, maxLen) {
   return str.length <= maxLen;
 }
 
-export { randomValue, fitLength };
+const isEscKey = (evt) => evt.keyCode === 27;
+
+const DELAY = 500;
+
+const debounce = (cb) => {
+  let lastTimeout = null;
+  return (...args) => {
+    if (lastTimeout) {
+      window.clearTimeout(lastTimeout);
+    }
+    lastTimeout = window.setTimeout(() => {
+      cb(...args);
+    }, DELAY);
+  };
+};
+
+export { randomValue, fitLength, isEscKey, debounce };
